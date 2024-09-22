@@ -16,6 +16,8 @@ function spacebar(){
     });
 }
 
+spacebar()
+
 function updateTime() {
     document.getElementById('timer').innerText = seconds;
     seconds++;
