@@ -1,8 +1,13 @@
 let timer;
 let seconds = 0;
+let toggle = true
 
-
-
+function toggletimer() {
+    if (toggle):
+        startTimer()
+    else: 
+        stopTimer()
+}
 function updateTime() {
     document.getElementById('timer').innerText = seconds;
     seconds++;
@@ -25,11 +30,13 @@ function resetTimer() {
 document.addEventListener('keydown', function(event) {
     if (event.code === 'Space') {
         document.getElementById('timer').innerText = "release to start";
+        alert("a")
     }
 });
 
 document.addEventListener('keyup', function(event) {
     if (event.code === 'Space') {
-        startTimer()
+        toggletimer()
+        alert("a")
     }
 });
