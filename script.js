@@ -1,6 +1,21 @@
 let timer;
 let seconds = 0;
 
+
+function spacebar(){
+    document.addEventListener('keydown', function(event) {
+        if (event.code === 'Space') {
+                document.getElementById('timer').innerText = "release to start";
+            }
+         });
+    
+    document.addEventListener('keyup', function(event) {
+        if (event.code === 'Space') {
+            startTimer()
+        }
+    });
+}
+
 function updateTime() {
     document.getElementById('timer').innerText = seconds;
     seconds++;
